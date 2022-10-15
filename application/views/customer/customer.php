@@ -28,7 +28,7 @@
                                             <td><?php echo $u->nama ?></td>
                                             <td><?php echo $u->alamat ?></td>
                                             <td><?php echo $u->no_hp ?></td>
-                                            <td><?php echo anchor('customer/edit/' . $u->id_cust, 'Edit'); ?> |
+                                            <td>
                                                 <?php echo anchor('customer/delete/' . $u->id_cust, 'Delete'); ?></td>
                                         </tr>
                                     <?php $no++;

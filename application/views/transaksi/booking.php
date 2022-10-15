@@ -36,13 +36,13 @@
                                             <td><?php echo $u->alamat ?></td>
                                             <td><?php echo $u->no_hp ?></td>
                                             <td><?php if ($u->status == "Belum Proses") {
-                                                    echo anchor('transaksi/tambah', 'Proses', array('class' => 'btn btn-warning'));
+                                                    echo anchor('transaksi/service/' . $u->id_trx, 'Proses', array('class' => 'btn btn-warning'));
                                                 } else {
                                                     echo $u->status;
                                                 } ?></td>
                                             <?php if ($u->status == "Belum Proses") { ?>
-                                                <td><?php echo anchor('customer/edit/' . $u->id_cust, 'Edit'); ?> |
-                                                    <?php echo anchor('customer/delete/' . $u->id_cust, 'Delete'); ?></td>
+                                                <td><?php echo anchor('transaksi/edit/' . $u->id_trx, 'Edit'); ?> |
+                                                    <?php echo anchor('transaksi/delete/' . $u->id_trx, 'Delete'); ?></td>
                                             <?php } ?>
                                         </tr>
                                     <?php $no++;
